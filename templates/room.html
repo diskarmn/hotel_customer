@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="icon" href="path_to_your_icon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleroom.css') }}">
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <title>Landing Page</title>
+</head>
+
+<body>
+    <header class="d-flex text-white pt-4 pb-1 flex-column justify-content-around align-items-center">
+        <h1 class="m-5" id="headh1"><b>Diska Hotel</b></h1>
+        <div class="nav w-100 d-flex flex-row justify-content-around align-items-center">
+            <div class="max-content"><a href="{{ url_for('home') }}">
+                    <h3 class="btn btn-lg btn-outline-light" id="navh3">About</h3>
+                </a></div>
+            <div class="max-content"><a href="{{ url_for('room') }}">
+                    <h3 class="btn btn-lg btn-outline-light" id="navh3">Room</h3>
+                </a></div>
+            <div class="max-content"><a href="{{ url_for('facility') }}">
+                    <h3 class="btn btn-lg btn-outline-light" id="navh3">Facility</h3>
+                </a></div>
+            <div class="max-content"><a href="{{ url_for('book') }}">
+                    <h3 class="btn btn-lg btn-outline-light" id="navh3">Book Now</h3>
+                </a></div>
+        </div>
+    </header>
+    <main class="w-100 bg-secondary text-white pt-5 d-flex justify-content-center flex-column align-items-center">
+        <div class="listroom p-5 d-flex justify-content-center align-items-center flex-column">
+            <div class="regular p-5 mb-3 border border-white">
+                <div id="bungkusroom" class="d-flex  bungkusroom justify-content-between align-items-center flex-row">
+                    <div class="gambarroom "><img src="{{ url_for('static',filename='a1.jpg') }}"></div>
+                    <div class="penjelasan p-5 d-flex  flex-column ">
+                        <div class="atas ">
+                            <h3>Regular Room</h3>
+                            <div class="ikon d-flex flex-row align-items-center">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1077/1077012.png"><h3>Max 2 Pax</h3></div>
+                            
+                            <p class="m-4">Facility: TV, air conditioning, kettle jug, wardrobe, desk, bed for 2 people, bathroom (sink, shower) </p>
+                            <p class="m-4">Amenities: cofee, sugar, tea, mineral water, bathroom ( shoap, shampo, toothbrush and toothpaste, shower cap) </p>
+                        </div>
+                        <div class=" bawah  d-flex justify-content-between  flex-row">
+                            <div class="kiri pt-4">
+                                <h3>From IDR </h3>
+                                <h3>450,000 /Night</h3>
+                                <hr>
+                                <a  href="{{ url_for('book') }}" class="btn btn-outline-light">Book Now</a>
+                            </div>
+                            <div class="kanan"><img src="{{ url_for('static',filename='a2.jpg') }}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--room2-->
+            <div class="regular p-5 mb-3 border border-white">
+                <div id="bungkusroom" class="d-flex  bungkusroom justify-content-between align-items-center flex-row">
+                    <div class="gambarroom "><img src="{{ url_for('static',filename='b1.jpg') }}"></div>
+                    <div class="penjelasan p-5 d-flex  flex-column ">
+                        <div class="atas ">
+                            <h3>Diska Room</h3>
+                            <div class="ikon d-flex flex-row align-items-center">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1077/1077012.png"><h3>Max 2 Pax</h3></div>
+                            
+                            <p class="m-4">Facility: TV, air conditioning, kettle jug, wardrobe, desk, bed for 2 people, bathroom (sink, shower) </p>
+                            <p class="m-4">Amenities: cofee, sugar, tea, mineral water, bathroom ( shoap, shampo, toothbrush and toothpaste, shower cap) </p>
+                        </div>
+                        <div class=" bawah  d-flex justify-content-between  flex-row">
+                            <div class="kiri pt-4">
+                                <h3>From IDR </h3>
+                                <h3>650,000 /Night</h3>
+                                <hr>
+                                <a href="{{ url_for('book') }}" class="btn btn-outline-light">Book Now</a>
+                            </div>
+                            <div class="kanan"><img src="{{ url_for('static',filename='b2.jpg') }}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--room2-->
+            <div class="regular p-5 mb-3 border border-white">
+                <div id="bungkusroom" class="d-flex  bungkusroom justify-content-between align-items-center flex-row">
+                    <div class="gambarroom "><img src="{{ url_for('static',filename='c1.jpg') }}"></div>
+                    <div class="penjelasan p-5 d-flex  flex-column ">
+                        <div class="atas ">
+                            <h3>Super Room</h3>
+                            <div class="ikon d-flex flex-row align-items-center">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1077/1077012.png">
+                                <h3>Max 4 Pax</h3></div>
+                            <p class="m-4">Facility: TV, air conditioning,kettle jug, wardrobe, desk, bed for 2 people, bathroom (sink, shower) </p>
+                            <p class="m-4">Amenities: cofee, sugar, tea, mineral water, bathroom ( shoap, shampo, toothbrush and toothpaste, shower cap) </p>
+                        </div>
+                        <div class=" bawah  d-flex justify-content-between  flex-row">
+                            <div class="kiri pt-4">
+                                <h3>From IDR </h3>
+                                <h3>950,000 /Night</h3>
+                                <hr>
+                                <a href="{{ url_for('book') }}" class="btn btn-outline-light">Book Now</a>
+                            </div>
+                            <div class="kanan"><img src="{{ url_for('static',filename='c2.png') }}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--endroom-->
+        </div>
+    </main>
+
+
+
+    <!---->
+    <hr>
+    <footer class="d-flex justify-content-center align-items-center flex-column">
+
+        <p class="social-label card-title">Connect with Us</p>
+        <ul class="sosial list-unstyled d-flex justify-content-center align-items-center flex-row">
+            <li class="m-2"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384015.png"></li>
+            <li class="m-2"><img src="https://cdn-icons-png.flaticon.com/128/2168/2168281.png"></li>
+            <li class="m-2"><img src="https://cdn-icons-png.flaticon.com/128/3116/3116491.png"></li>
+            <li class="m-2"><img src="https://cdn-icons-png.flaticon.com/128/4494/4494465.png"></li>
+            <li class="m-2"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384014.png"></li>
+        </ul>
+
+
+
+        <p class="copyright text-center">© 2023 . Diska Romandoni</p>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    background-color: #709b43;
+    transition: .5s;
+}
+header:hover{
+    box-shadow: inset 0 0 50px #d2faa7;
+}
+header h1{
+    transition: .5s;
+}
+header:hover h1{
+    outline: 1px solid white;
+    padding:20px 30px;
+    border-radius: 5px;
+}
+.hero{
+    background-image: url('head.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.asr-body-wrapper{
+    background-color: rgb(224, 224, 224);
+    padding-bottom: 50px !important;
+}
+
+.gambarkamar{
+    width: 100%;
+    height:300px ;
+    background-image: url('a1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.gk1{
+    background-image: url('a1.jpg');
+}
+.gk2{
+    background-image: url('b1.jpg');
+}
+.gk3{
+    background-image: url('c1.jpg');
+}
+.room-icon{
+    width:50px;
+    height:50px;
+}
+.daftar{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-gap: 30px;
+    padding:30px;
+    height:max-content;
+    width:100%;
+}
+.isikamar{
+    height: max-content;
+    
+}
+.sosial li{
+    width:50px;
+    height: 50px;
+}
+.sosial li img{
+    width:100%;
+    height: 100%;
+}
+.isikamar a{
+    text-decoration:  none;
+    color: rgb(53, 53, 53);
+}
+@media (max-width: 768px) {
+    #navh3{
+        font-size: 70%;
+        padding: 5px 10px;
+    }
+    #headh1{
+        margin:20px !important;
+    }
+    .hero{
+        height:40vh !important;
+    }
+    .asr-body-wrapper{
+        padding-bottom: 20px !important;
+    }
+    .asr-icon-svg {
+        width: 16px; /* Ubah ukuran menjadi setengah, misalnya 16px */
+        height: 16px; /* Ubah ukuran menjadi setengah, misalnya 16px */
+      }
+    .col-md-4 .item .text{
+        font-size: 70%;
+        margin-top: 15px;
+    }
+    .asr-body-wrapper .list-container{
+        margin-top: 0 !important;
+    }
+    .about p{
+        font-size: 80%;
+    }
+    .daftar{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 30px;
+        padding:30px;
+    }
+    .gambarkamar{
+        width: 100%;
+        height:100px ;
+    }
+    .room-label{
+        font-size:60%;
+        margin-top: 5px;
+    }
+    .room-icon-label{
+        flex-direction: column !important;
+    }
+    .price-value,.price-unit,.currency strong{
+        font-size: 70%;
+    }
+    .isikamar div h3{
+        font-size: 110%;
+    }
+    .sosial li{
+        width:25px;
+        height: 25px;
+    }
+    .copyright{
+        font-size: 60%;
+    }
+}

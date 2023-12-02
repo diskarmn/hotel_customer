@@ -1,0 +1,149 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    background-color: #709b43;
+    transition: .5s;
+}
+header:hover{
+    box-shadow: inset 0 0 50px #d2faa7;
+}
+header h1{
+    transition: .5s;
+}
+header:hover h1{
+    outline: 1px solid white;
+    padding:20px 30px;
+    border-radius: 5px;
+}
+.sosial li{
+    width:50px;
+    height: 50px;
+}
+.sosial li img{
+    width:100%;
+    height: 100%;
+}
+.listroom{
+    width:94%;
+    background-color: transparent;
+
+}
+.regular{
+    width:100%;
+    border-radius: 5px;
+    height: max-content;
+    transition: .3s;
+}
+.gambarroom{
+    width:40%;
+    min-width:400px;
+    height: max-content;
+}
+.penjelasan{
+    width:60%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.gambarroom img{
+    width:100%;
+    height: 100%;
+}
+.kiri{
+    width:50%;
+    min-width:300px ;
+}
+.kanan{
+    width:40%;
+    min-width: 300px;
+}
+.kanan img{
+    width: 100%;
+}
+.ikon img{
+    width:5%;
+}
+.regular:hover{
+    transition: .3s;
+    box-shadow: inset 0 0 60px white;
+}
+
+@media (max-width: 768px) {
+    #navh3{
+        font-size: 70%;
+        padding: 5px 10px;
+    }
+    #headh1{
+        margin:20px !important;
+    }
+    .sosial li{
+        width:25px;
+        height: 25px;
+    }
+    .copyright{
+        font-size: 60%;
+    }
+
+    .listroom{
+        padding: 10px !important;
+    }
+    .regular{
+        padding:5px !important;
+    }
+    .bungkusroom{
+        flex-direction: column !important;
+        align-items: unset !important;
+        
+    }
+    #bungkusroom{
+        padding: 5px !important;
+    }
+    .gambarroom{
+        width: 100%;
+        min-width: unset;
+    }
+    .gambarroom img{
+        width: 100% !important;
+    }
+    .penjelasan{
+        padding: 0 !important;
+        margin-top: 10px;
+        width: 100%;
+    }
+    .ikon{
+        padding: 10px;
+    }
+    .ikon img{
+        width:20px;
+        margin-right: 5px;
+    }
+    .ikon h3{
+        font-size: 90%;
+    }
+    .atas p{
+        font-size: 80%;
+        margin:10px !important;
+    }
+    .bawah{
+        width:100%;
+    }
+    .kiri{
+        min-width: unset;
+        width:50% !important;
+        padding: 10px;
+    }
+    .kanan{
+        min-width: unset;
+        width:50%;
+    }
+    .kiri h3{
+        font-size: 90%;
+    }
+    .kiri a{
+        font-size: 90%;
+    }
+    .regular:hover{
+        box-shadow: inset 0 0 20px white;
+    }
+}

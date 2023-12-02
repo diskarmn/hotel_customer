@@ -1,0 +1,177 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    background-color: #709b43;
+    transition: .5s;
+}
+header:hover{
+    box-shadow: inset 0 0 50px #d2faa7;
+}
+header h1{
+    transition: .5s;
+}
+header:hover h1{
+    outline: 1px solid white;
+    padding:20px 30px;
+    border-radius: 5px;
+}
+.sosial li{
+    width:50px;
+    height: 50px;
+}
+.sosial li img{
+    width:100%;
+    height: 100%;
+}
+
+.bookroom {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, 400px);
+    justify-content: space-between;
+    grid-gap: 40px;
+  }
+.cbookroom{
+    height: max-content;
+    border-radius: 5px;
+}
+.atas{
+    width:100%;
+}
+.atas img{
+    width:100%;
+}
+.bawah input{
+    width:30%;
+}
+.form{
+    border-radius: 5px;
+}
+#date{
+    width:30%;
+}
+.remainingchild{
+    width:400px;
+    min-width: 25%;
+    height: max-content;
+}
+.remainingchild p{
+    border-radius: 5px;
+}
+.remainingchild img{
+    width:100%;
+}
+.booked, .bgabu{
+
+}
+
+
+@media (max-width: 768px) {
+    #navh3{
+        font-size: 70%;
+        padding: 5px 10px;
+    }
+    #headh1{
+        margin:20px !important;
+    }
+    .sosial li{
+        width:25px;
+        height: 25px;
+    }
+    .copyright{
+        font-size: 60%;
+    }
+ 
+    .bookroom{
+        grid-template-columns: repeat(auto-fit, 250px);
+        justify-content: center;
+    }
+    .orang div{
+        width:80% !important;
+
+    }
+    .main{
+        padding:10px !important;
+    }
+    .form{
+        padding: 20px !important;
+    
+    }
+    .orang div input{
+        width:40%;
+    }
+    .orang div label{
+        font-size: 80% !important;
+    }
+    .bawah label h1{
+        font-size: 100%;
+    }
+    .bawah p{
+        font-size: 90%;
+    }
+    #date{
+        width:60%;
+    }
+    .textinput{
+        font-size: 90% !important;
+    }
+    #name,#phone{
+        font-size: 90%;
+    }
+    .remainingchild{
+        padding:10px;
+    }
+    .remainingchild p{
+        font-size: 60%;
+        padding:5px !important;
+    }
+    .remainingchild h3{
+        font-size: 70%;
+        margin-top: 10px !important;
+    }
+    .booked table tr td h3{
+        font-size: 100%;
+    }
+    .booked table tr td div p{
+        padding:10px !important;
+        border-radius: 5px;
+    }
+    #remaining{
+        flex-direction: column !important;
+    }
+    .remainingchild{
+        width:100% !important;
+    }
+    .remainingchild img{
+        width:100% !important;
+    }
+    .atas{
+        width:70% !important;
+
+    }
+    .bookroom{
+        justify-content: center !important;
+        display: flex !important;
+        flex-direction: column;
+        width:100%;
+
+    }
+    .atas img{
+        width:90% !important;
+    }
+    #cbookroom{
+        width:100%;
+        padding:10px !important ;
+        display: flex;
+        justify-content: center ;
+        align-items: center;
+        flex-direction: column;
+    }
+    .bawah{
+        width: 100%;
+        padding: 10px !important;
+    }
+    .bawah input{
+        width:70%;
+    }
+}

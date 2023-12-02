@@ -1,0 +1,163 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #709b43;
+    transition: .5s;
+}
+
+header:hover {
+    box-shadow: inset 0 0 50px #d2faa7;
+}
+
+header h1 {
+    transition: .5s;
+}
+
+header:hover h1 {
+    outline: 1px solid white;
+    padding: 20px 30px;
+    border-radius: 5px;
+}
+
+.sampul {
+    width: 100%;
+    background-image: url('fo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+}
+
+.sampul h1 {
+    border-radius: 5px;
+    font-size: 400%;
+    padding: 40px 70px;
+}
+
+.sosial li {
+    width: 50px;
+    height: 50px;
+}
+
+.sosial li img {
+    width: 100%;
+    height: 100%;
+}
+
+.facilitylist,
+.facility {
+    width: 100%;
+}
+
+.atas {
+    width: 100%;
+}
+
+.kiri {
+    width: 30%;
+}
+
+.kiri img {
+    width: 100%;
+}
+
+.kanan {
+    width: 70%;
+    font-size: 200%;
+}
+
+.facility {
+    border-radius: 10px;
+    background-color: #709b43;
+    transition: .3s;
+}
+
+.facility:hover {
+    background-color: #557532;
+    transition: .3s;
+}
+
+.kanan2 {
+    align-items: flex-end;
+
+    width: 70%;
+    font-size: 200%;
+}
+
+@media (max-width: 768px) {
+    #navh3 {
+        font-size: 70%;
+        padding: 5px 10px;
+    }
+
+    #headh1 {
+        margin: 20px !important;
+    }
+
+    .sosial li {
+        width: 25px;
+        height: 25px;
+    }
+
+    .copyright {
+        font-size: 60%;
+    }
+
+    .sampul {
+        height: 40vh;
+    }
+
+    .sampul h1 {
+        border-radius: 5px;
+        font-size: 200%;
+        padding: 20px 40px;
+    }
+
+    .kiri {
+        width: 50%;
+    }
+
+    .kiri img {
+        width: 100%;
+    }
+
+    .kanan,
+    .kanan2 {
+        width: 50%;
+        padding: 20px !important;
+    }
+
+    .kanan h1,
+    .kanan2 h1 {
+        font-size: 50%;
+    }
+
+    .kanan h3,
+    .kanan2 h3 {
+        font-size: 40%;
+    }
+
+    .text p {
+        font-size: 80%;
+    }
+
+    .facilitylist {
+        padding: 20px !important;
+    }
+
+    .facility {
+        border-radius: 10px;
+        background-color: #709b43;
+        transition: .3s;
+        padding: 20px !important;
+    }
+
+    .facility:hover {
+        background-color: #557532;
+        transition: .3s;
+    }
+
+
+}

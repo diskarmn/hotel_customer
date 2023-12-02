@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="icon" href="path_to_your_icon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='book.css') }}">
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <title>Landing Page</title>
+</head>
+
+<body>
+    <header class="d-flex text-white pt-4 pb-1 flex-column justify-content-around align-items-center">
+        <h1 class="m-5" id="headh1"><b>Diska Hotel</b></h1>
+        <div class="nav w-100 d-flex flex-row justify-content-around align-items-center">
+            <div class="max-content"><a href="{{ url_for('home') }}">
+                    <h3 class="btn btn-lg btn-outline-light" id="navh3">About</h3>
+                </a></div>
+            <div class="max-content"><a href="{{ url_for('room') }}">
+                    <h3 class="btn btn-lg btn-outline-light" id="navh3">Room</h3>
+                </a></div>
+            <div class="max-content"><a href="{{ url_for('facility') }}">
+                    <h3 class="btn btn-lg btn-outline-light" id="navh3">Facility</h3>
+                </a></div>
+            <div class="max-content"><a href="{{ url_for('book') }}">
+                    <h3 class="btn btn-lg btn-outline-light" id="navh3">Book Now</h3>
+                </a></div>
+        </div>
+    </header>
+
+    <main class="bg-secondary p-5 text-white main">
+        <div class="d-flex justify-content-center w-100">
+            <h2>Remaining Room</h2>
+        </div>
+
+        <div id="remaining"
+         class="remaining d-flex justify-content-around align-items-center flex-row">
+        </div>
+        <form class="border border-white p-5 form">
+            <div class="mb-3">
+                <label for="name" class="form-label textinput">Name/Group</label>
+                <input type="text" placeholder="Enter your name" class="form-control" id="name" aria-describedby="name"
+                    required>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label textinput">Phone Number</label>
+                <input type="tel" placeholder="Enter your phone number" class="form-control" id="phone" required
+                    aria-describedby="phoneHelp">
+            </div>
+            <div class="mb-3 orang d-flex align-items-center">
+                <img src="https://cdn-icons-png.flaticon.com/128/1077/1077012.png"
+                    style="width: 50px; height: 50px; margin-right: 10px;">
+                <div style="width: 20%;">
+                    <label for="people" class="form-label textorang">How many people will be staying?</label>
+                    <input type="number" class="form-control" id="people" aria-describedby="peopleHelp" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="date" class="form-label textinput">Date Check In</label>
+                <input type="date" placeholder="Enter a date" class="form-control bg-secondary text-white" id="date"
+                    required aria-describedby="dateHelp">
+                <div id="dateHelp" class="form-text text-white textinput">Please select a date.</div>
+            </div>
+
+            <div class="mb-3  bookroom">
+                <div id="cbookroom"  class="cbookroom border border-white p-4">
+                    <div class="atas"><img src="{{ url_for('static',filename='a1.jpg') }}"></div>
+                    <div class="bawah p-3 d-flex justify-content-center flex-column align-items-center">
+                        <label for="regularnight">
+                            <h1>Regular Room</h1>
+                        </label>
+                        <p>IDR 450,000</p>
+                        <input type="number" class="form-control mt-3" id="regularnight" min="0" max="5" value="0"
+                            oninput="if(this.value==='') this.value='0'">
+                        <p>/Night</p>
+                        <input type="number" class="form-control mt-3" id="regularroom" min="0" max="15" value="0"
+                            oninput="if(this.value==='') this.value='0'">
+                        <p>/Room</p>
+                    </div>
+                </div>
+                <!--2-->
+                <div id="cbookroom"  class="cbookroom border border-white p-4">
+                    <div class="atas"><img src="{{ url_for('static',filename='b1.jpg') }}"></div>
+                    <div class="bawah p-3 d-flex justify-content-center flex-column align-items-center">
+                        <label for="diskanight">
+                            <h1>Diska Room</h1>
+                        </label>
+                        <p>IDR 650,000</p>
+                        <input type="number" class="form-control mt-3" id="diskanight" min="0" max="5" value="0"
+                            oninput="if(this.value==='') this.value='0'">
+                        <p>/Night</p>
+                        <input type="number" class="form-control mt-3" id="diskaroom" min="0" max="10" value="0"
+                            oninput="if(this.value==='') this.value='0'">
+                        <p>/Room</p>
+                    </div>
+                </div>
+                <!--3-->
+                <div id="cbookroom"  class="cbookroom border border-white p-4">
+                    <div class="atas"><img src="{{ url_for('static',filename='c1.jpg') }}"></div>
+                    <div class="bawah p-3 d-flex justify-content-center flex-column align-items-center">
+                        <label for="specialnight">
+                            <h1>Special Room</h1>
+                        </label>
+                        <p>IDR 950,000</p>
+                        <input type="number" class="form-control mt-3" id="specialnight" min="0" max="5" value="0"
+                            oninput="if(this.value==='') this.value='0'">
+                        <p>/Night</p>
+                        <input type="number" class="form-control mt-3" id="specialroom" min="0" max="5" value="0"
+                            oninput="if(this.value==='') this.value='0'">
+                        <p>/Room</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 ">
+                <label for="message" class="form-label textinput">Message (opotional)</label>
+                <textarea class="form-control text-secondary" placeholder="Leave a message here"
+                    id="message"></textarea>
+            </div>
+
+            <button type="submit" onclick="booking()" class="btn btn-lg btn-outline-light">Book</button>
+        </form>
+    </main>
+
+    <!---->
+    <hr>
+    <footer class="d-flex justify-content-center align-items-center flex-column">
+
+        <p class="social-label card-title">Connect with Us</p>
+        <ul class="sosial list-unstyled d-flex justify-content-center align-items-center flex-row">
+            <li class="m-2"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384015.png"></li>
+            <li class="m-2"><img src="https://cdn-icons-png.flaticon.com/128/2168/2168281.png"></li>
+            <li class="m-2"><img src="https://cdn-icons-png.flaticon.com/128/3116/3116491.png"></li>
+            <li class="m-2"><img src="https://cdn-icons-png.flaticon.com/128/4494/4494465.png"></li>
+            <li class="m-2"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384014.png"></li>
+        </ul>
+
+
+
+        <p class="copyright text-center">© 2023 . Diska Romandoni</p>
+
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: 'GET',
+                url: '/tampil',
+                data: {},
+                success: function (response) {
+                    var room = response['room']
+                    for (let i = 0; i < room.length; i++) {
+                        let regular = room[i]['regular'];
+                        let diska = room[i]['diska'];
+                        let special = room[i]['special'];
+                        let isi = `<div class="remainingchild d-flex align-items-center justify-content-center flex-column">
+                            <img src="{{ url_for('static',filename='a1.jpg') }}">
+                            <h3 class="mt-2">Regular Room</h3>
+                            <p class="bg-danger p-2">Remaining <b>${regular}</b> room</p>
+                        </div>
+                        <div class="remainingchild d-flex align-items-center justify-content-center flex-column">
+                            <img src="{{ url_for('static',filename='b1.jpg') }}">
+                            <h3 class="mt-2">Diska Room</h3>
+                            <p class="bg-danger p-2">Remaining <b>${diska}</b> room</p>
+                        </div>
+                        <div class="remainingchild d-flex align-items-center justify-content-center flex-column">
+                            <img src="{{ url_for('static',filename='c1.jpg') }}">
+                            <h3 class="mt-2">Special Room</h3>
+                            <p class="bg-danger p-2">Remaining <b>${special}</b> room</p>
+                        </div>`;
+                        $(".remaining").append(isi);
+                    }
+                }
+            })
+        });
+        function booking(){
+            event.preventDefault();
+            var name=$("#name").val();
+            var phone=$("#phone").val();
+            var people=$("#people").val();
+            var date=$("#date").val();
+            var regularnight=$("#regularnight").val();
+            var regularroom=$("#regularroom").val();
+            var diskanight=$("#diskanight").val();
+            var diskaroom=$("#diskaroom").val();
+            var specialnight=$("#specialnight").val();
+            var specialroom=$("#specialroom").val();
+            var message=$("#message").val();
+            $.ajax({
+                type:'POST',
+                url:'/booking',
+                data:{name:name,phone:phone,people:people,date:date,
+                regularnight:regularnight,regularroom:regularroom,
+                diskanight:diskanight,diskaroom:diskaroom,specialnight:specialnight,
+                specialroom:specialroom,message:message},
+            success:function(response){
+                window.location.href = '/berhasil?' + $.param({name:name
+                            ,phone:phone,people:people,date:date,regularroom: 
+                            regularroom, regularnight: regularnight,
+                        diskanight: diskanight, diskaroom: diskaroom,
+                        specialnight: specialnight, specialroom: specialroom,
+                        message:message
+                }) ;
+            }
+            })
+        }
+        // function booking() {
+        //     event.preventDefault();
+        //     var name = $("#name").val();
+        //     var phone = $("#phone").val();
+        //     var people = $("#people").val();
+        //     var date = $("#date").val();
+        //     var regularnight = $("#regularnight").val();
+        //     var regularroom = $("#regularroom").val();
+        //     var diskanight = $("#diskanight").val();
+        //     var diskaroom = $("#diskaroom").val();
+        //     var specialnight = $("#specialnight").val();
+        //     var specialroom = $("#specialroom").val();
+        //     var message = $("#message").val();
+        //     var total = calculateTotal(); // You need a function to calculate total here
+
+        //     $.ajax({
+        //         type: 'POST',
+        //         url: '/booking',
+        //         data: {
+        //             name: name, phone: phone, people: people, date: date,
+        //             regularnight: regularnight, regularroom: regularroom,
+        //             diskanight: diskanight, diskaroom: diskaroom, specialnight: specialnight,
+        //             specialroom: specialroom, message: message, total: total
+        //         },
+        //         success: function (response) {
+        //             window.location.href = '/berhasil?' + $.param({
+        //                 name: name, phone: phone, people: people, date: date,
+        //                 regularroom: regularroom, regularnight: regularnight,
+        //                 diskanight: diskanight, diskaroom: diskaroom,
+        //                 specialnight: specialnight, specialroom: specialroom,
+        //                 message: message, total: total
+        //             });
+        //         }
+        //     })
+        // }
+
+    </script>
+</body>
+
+</html>
